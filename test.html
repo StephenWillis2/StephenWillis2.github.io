@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Health Benefits of Running: Assignment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Font Import: Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background inspired by GitHub dark theme */
+        }
+        .card-image {
+            filter: drop-shadow(0 4px 6px rgba(52, 211, 153, 0.4)); /* Subtle glow effect */
+        }
+        .header-image {
+            /* Ensures the image doesn't get too tall */
+            max-height: 400px; 
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8">
+
+    <!-- Main Container -->
+    <div class="max-w-4xl mx-auto bg-gray-800 rounded-2xl shadow-2xl p-6 sm:p-10 border border-gray-700">
+        
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">
+                The Profound Benefits of Running
+            </h1>
+            <p class="text-xl text-emerald-400 font-medium">
+                Research Assignment Overview: Health &amp; Mitigation
+            </p>
+        </header>
+
+        <!-- Main Image/Graphic Collection (Replaced with user image) -->
+        <figure class="mb-10 rounded-xl overflow-hidden shadow-xl border border-emerald-600/50">
+            <!-- Using the uploaded 'crosscountry.avif' image -->
+            <img class="header-image" 
+                 src="crosscountry.avif" 
+                 alt="Cross country runners on a trail."
+                 onerror="this.onerror=null; this.src='https://placehold.co/800x400/34d399/111827?text=Cross+Country+Running';" 
+            />
+            <figcaption class="p-3 bg-gray-900 text-gray-400 text-center text-sm">
+                Cross Country Running
+            </figcaption>
+        </figure>
+
+
+        <!-- Main Content Introduction -->
+        <div class="mb-10 p-6 bg-gray-700 rounded-xl border-l-4 border-emerald-500">
+            <p class="text-gray-200 leading-relaxed text-lg">
+                So far, my research has found that the **amazing health benefits of running** largely outweigh the potential negatives. The key takeaway is that these risks can be managed with proper knowledge, making running one of the most accessible and effective forms of exercise.
+            </p>
+        </div>
+
+        <!-- Benefits Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <svg class="w-8 h-8 mr-3 text-emerald-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"/><path d="M12 20v2"/><path d="M20 12h2"/><path d="M2 12h2"/><path d="m18.5 5.5-1.42 1.42"/><path d="m6.88 17.12-1.42 1.42"/><path d="m17.12 6.88 1.42-1.42"/><path d="m5.5 18.5 1.42-1.42"/><path d="M8 12h10"/><path d="M12 12V8"/><path d="M12 16c1.1 0 2-.9 2-2s-.9-2-2-2"/></svg>
+                Core Health Benefits
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <!-- Benefit Card 1: Cardiovascular (Image added) -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-emerald-500/50 transition duration-300">
+                    <img class="card-image w-20 h-20 mb-3 mx-auto rounded-full p-2 bg-gray-900" 
+                         src="https://placehold.co/100x100/34d399/111827?text=Heart+Health" 
+                         alt="Heart health graphic" />
+                    <h3 class="text-xl font-semibold text-emerald-400 mb-2 text-center">Cardiovascular Enhancement</h3>
+                    <p class="text-gray-300 text-sm text-center">
+                        There are great improvements in the **cardiovascular system**, causing the enhancement of blood and oxygen circulation throughout the body.
+                    </p>
+                </div>
+
+                <!-- Benefit Card 2: Mental Health (Image added) -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-emerald-500/50 transition duration-300">
+                    <img class="card-image w-20 h-20 mb-3 mx-auto rounded-full p-2 bg-gray-900" 
+                         src="https://placehold.co/100x100/34d399/111827?text=Stress+Relief" 
+                         alt="Mental health graphic" />
+                    <h3 class="text-xl font-semibold text-emerald-400 mb-2 text-center">Mental Well-being</h3>
+                    <p class="text-gray-300 text-sm text-center">
+                        **Mental health benefits** include significant stress reduction and an overall improved mood, boosting emotional resilience.
+                    </p>
+                </div>
+
+                <!-- Benefit Card 3: Musculoskeletal (Image added) -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-emerald-500/50 transition duration-300">
+                    <img class="card-image w-20 h-20 mb-3 mx-auto rounded-full p-2 bg-gray-900" 
+                         src="https://placehold.co/100x100/34d399/111827?text=Bone+Density" 
+                         alt="Bone strength graphic" />
+                    <h3 class="text-xl font-semibold text-emerald-400 mb-2 text-center">Bone Strength & Density</h3>
+                    <p class="text-gray-300 text-sm text-center">
+                        Running helps to **increase bone density** and prevent osteoporosis by stimulating the bones to adapt and become stronger.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Risks and Mitigation Section (User image added) -->
+        <section>
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <svg class="w-8 h-8 mr-3 text-red-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.83 18a2 2 0 0 0 1.76 3H20.41a2 2 0 0 0 1.76-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Managing the Risks
+            </h2>
+            
+            <!-- Updated to a grid to show text and image side-by-side -->
+            <div class="grid md:grid-cols-2 gap-6 items-center bg-gray-700 p-6 rounded-xl shadow-lg border-l-4 border-red-500">
+                <p class="text-gray-300 leading-relaxed">
+                    While there are still risks like **overtraining**, muscle fatigue, and **nutritional deficits**, I have found that if you understand how to properly train and eat a well-balanced diet, you can avoid all the negative effects altogether. This careful approach to **proper training techniques** and **nutrition** is key to sustainable and healthy running.
+                </p>
+                
+                <!-- User image added here -->
+                <figure class_="rounded-lg overflow-hidden border border-red-600/50">
+                    <img src="cross country running in corpus christi texas injuries.jpg" 
+                         alt="A runner holding their leg, indicating a potential injury." 
+                         class="w-full h-auto object-cover rounded-lg"
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x300/ef4444/111827?text=Running+Injuries';"
+                    >
+                    <figcaption class="p-2 bg-gray-900 text-gray-400 text-center text-xs">
+                        Proper training helps avoid common running injuries.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer for Assignment Source -->
+    <footer class="text-center mt-8 text-gray-500 text-sm">
+        <p>Assignment source material provided by student research.</p>
+    </footer>
+
+</body>
+</html>
