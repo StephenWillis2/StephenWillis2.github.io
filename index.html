@@ -3,216 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Submission: The Evolving Digital Landscape</title>
+    <title>Academic Assignment Template</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Define the primary font, prioritizing Inter */
-        :root {
+        /* Custom font import for aesthetic consistency (Inter is Tailwind default but ensures availability) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
             font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* Very light blue/gray background */
         }
-        /* Custom scrollbar for a sleek look */
-        body::-webkit-scrollbar {
-            width: 8px;
-        }
-        body::-webkit-scrollbar-thumb {
-            /* UPDATED: Changed from blue to green */
-            background-color: #10b981; /* emerald-500 */
-            border-radius: 4px;
-        }
-        body::-webkit-scrollbar-track {
-            background-color: #1f2937; /* gray-800 */
-        }
-        /* Custom responsive container for 16:9 video embeds */
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        /* Style for smooth scrolling when jumping to anchors */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        /* UPDATED: Changed primary color to emerald-500 */
-                        'primary': '#10b981', // Tailwind Emerald-500
-                        'secondary-bg': '#1f2937', // Tailwind Gray-800
-                        'main-bg': '#111827', // Tailwind Gray-900
-                    },
-                }
-            }
-        }
-    </script>
 </head>
-<body class="bg-main-bg min-h-screen text-gray-100 antialiased selection:bg-primary selection:text-white">
+<body class="antialiased min-h-screen">
 
-    <div class="max-w-4xl mx-auto p-6 md:p-10">
-
-        <!-- NEW TOP IMAGE BLOCK (Used to be Figure 3) -->
-        <div class="mb-8 rounded-lg overflow-hidden shadow-2xl">
-            <!-- This image is positioned as an un-numbered introductory visual/banner -->
-            <img src="crosscountry.avif" 
-                 alt="A runner splashing through a muddy obstacle, symbolizing the challenges of the digital age." 
-                 class="w-half h-auto object-cover rounded-lg border-2 border-primary transition duration-500 ease-in-out transform hover:scale-[101%]"/>
-        </div>
-        <!-- END NEW TOP IMAGE BLOCK -->
-
-        <!-- Header Block: Title and Metadata -->
-        <header class="mb-10 p-6 bg-secondary-bg rounded-xl shadow-lg border-t-4 border-primary">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-2 leading-tight">
-                The Evolving Digital Landscape: A Critical Analysis
+    <header class="bg-indigo-700 text-white shadow-xl py-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Assignment Title -->
+            <h1 id="assignment-title" class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-2">
+                The Echoes of Innovation: AI and the Future of Creative Labor
             </h1>
-            <p class="text-lg text-primary font-medium mb-4">
-                Writing Assignment: Critical Theory & Media
+            <!-- Author/Course Info -->
+            <p class="text-indigo-200 text-lg font-medium">
+                By Jane Doe | English 301: Advanced Composition | November 2025
             </p>
-            <div class="flex flex-col sm:flex-row sm:justify-between text-sm text-gray-400 border-t border-gray-700 pt-4">
-                <span class="mb-2 sm:mb-0">
-                    Student Name: <span class="text-gray-300 font-semibold">Alex P. Hawthorne</span>
-                </span>
-                <span>
-                    Submission Date: <span class="text-gray-300 font-semibold">November 11, 2025</span>
-                </span>
+        </div>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="navbar" class="sticky top-0 z-10 bg-white shadow-md border-b border-indigo-100 py-3 mb-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex space-x-4 overflow-x-auto whitespace-nowrap">
+                <a href="#abstract" class="text-indigo-600 hover:text-indigo-800 px-3 py-1.5 rounded-lg font-medium transition-colors hover:bg-indigo-50">Abstract</a>
+                <a href="#introduction" class="text-indigo-600 hover:text-indigo-800 px-3 py-1.5 rounded-lg font-medium transition-colors hover:bg-indigo-50">Introduction</a>
+                <a href="#section-1" class="text-indigo-600 hover:text-indigo-800 px-3 py-1.5 rounded-lg font-medium transition-colors hover:bg-indigo-50">Section I</a>
+                <a href="#section-2" class="text-indigo-600 hover:text-indigo-800 px-3 py-1.5 rounded-lg font-medium transition-colors hover:bg-indigo-50">Section II</a>
+                <a href="#conclusion" class="text-indigo-600 hover:text-indigo-800 px-3 py-1.5 rounded-lg font-medium transition-colors hover:bg-indigo-50">Conclusion</a>
             </div>
-        </header>
+        </div>
+    </nav>
 
-        <!-- Main Content: The Essay Body -->
-        <main id="essay-content" class="text-gray-300 space-y-6 text-base md:text-lg leading-relaxed">
-            <h2 class="text-2xl font-bold text-white mb-4 border-b border-gray-700 pb-2">Introduction</h2>
-            <p>
-                The turn of the 21st century has witnessed a paradigm shift in human communication, social structure, and knowledge acquisition, driven primarily by the ubiquity of digital technologies. This paper seeks to critically analyze the dual nature of this evolving digital landscape, exploring both its revolutionary potential for democratic engagement and its inherent risks regarding privacy, algorithmic bias, and cultural homogenization. The central thesis is that while digital platforms offer unprecedented tools for connection, their current infrastructure, often controlled by centralized entities, necessitates a revised framework of digital literacy and governance to safeguard individual freedoms.
-            </p>
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
 
-            <!-- IMAGE 1: Two runners on a city street (pexels-ketchumcommunity-1564470.jpg) - Figure number retained -->
-            <figure class="my-8 rounded-lg overflow-hidden bg-gray-800 p-2 shadow-xl">
-                <img src="pexels-ketchumcommunity-1564470.jpg" alt="Two runners moving quickly down a city street." class="w-full h-auto object-cover rounded-md border border-gray-700"/>
-                <figcaption class="mt-3 text-center text-sm text-gray-400 italic">Figure 1: The fast-paced reality of modern societal change, requiring constant adaptation.</figcaption>
-            </figure>
-            <!-- END IMAGE 1 -->
+        <!-- NEW IMAGE SECTION - ADDED HERE -->
+        <div class="mb-10 rounded-xl overflow-hidden shadow-xl">
+            <img src="crosscountry.avif" 
+                 alt="Black and white photo of a runner competing in a muddy cross country race, splashing through water." 
+                 class="w-full h-auto object-cover" 
+                 style="max-height: 400px; width: 100%;"
+                 onerror="this.onerror=null; this.src='https://placehold.co/1000x400/333/fff?text=Assignment+Visual'">
+        </div>
+        <!-- END NEW IMAGE SECTION -->
 
-            <h2 class="text-2xl font-bold text-white mb-4 border-b border-gray-700 pb-2 pt-4">The Promise of Decentralization</h2>
-            <p>
-                Initially, the internet was hailed as the ultimate democratizing force. The ability for any individual to publish content, bypass traditional gatekeepers, and form global communities represented a profound political and social shift. This decentralized power structure was meant to foster a robust marketplace of ideas, where truth could emerge through open discourse. However, the rise of powerful platform monopolies has complicated this narrative, effectively replacing old media gatekeepers with new, arguably more powerful, algorithmic ones.
-            </p>
+        <!-- Main Content Card -->
+        <section class="bg-white p-6 sm:p-10 rounded-2xl shadow-2xl border border-gray-100">
 
-            <!-- IMAGE 2: Group of runners on a bridge (pexels-runffwpu-2770408.jpg) - Figure number retained -->
-            <figure class="my-8 rounded-lg overflow-hidden bg-gray-800 p-2 shadow-xl">
-                <img src="pexels-runffwpu-2770408.jpg" alt="A group of runners on a wide bridge, symbolizing connectivity." class="w-full md:w-3/4 mx-auto h-auto object-cover rounded-md border border-gray-700"/>
-                <figcaption class="mt-3 text-center text-sm text-gray-400 italic">Figure 2: Navigating the complex routes of information exchange and community connection.</figcaption>
-            </figure>
-            <!-- END IMAGE 2 -->
-
-            <h2 class="text-2xl font-bold text-white mb-4 border-b border-gray-700 pb-2 pt-4">The Algorithm's Echo Chamber</h2>
-            <p>
-                Algorithmic curation, designed ostensibly to enhance user engagement, has inadvertently led to the proliferation of echo chambers and filter bubbles. By prioritizing content that maximizes screen time, these systems often boost sensationalism, polarization, and misinformation. This phenomenon raises critical questions about the nature of public reason in the digital age. When citizens are presented with divergent and often contradictory realities, the necessary foundation for collective action and shared governance erodes significantly.
-            </p>
-
-            <p>
-                Furthermore, the economic model underpinning these platforms—surveillance capitalism—treats user attention and personal data as the primary commodity. This constant extraction and monetization of private life demands a reassessment of digital rights, moving beyond mere consent to establishing meaningful data sovereignty for the individual.
-            </p>
-
-            <h2 class="text-2xl font-bold text-white mb-4 border-b border-gray-700 pb-2 pt-4">Conclusion</h2>
-            <p>
-                In closing, the digital landscape is neither inherently utopian nor dystopian; it is a powerful tool reflecting the priorities of its creators. The path forward requires a multi-pronged approach: enhanced critical digital literacy in education, regulatory frameworks that ensure algorithmic transparency, and the active support of decentralized, open-source alternatives. Only through informed engagement and proactive governance can we ensure that the revolutionary promise of digital technology serves the interests of a diverse and democratic society, rather than merely enriching a select few.
-            </p>
-        </main>
-        
-        <!-- UPDATED BLOCK: Supplemental Video Resources with Embeds -->
-        <section class="mt-12 pt-8 border-t border-gray-700">
-            <h3 class="text-xl font-semibold text-primary mb-6">Supplemental Video Resources</h3>
-            <div class="space-y-8">
-                
-                <!-- Video 1: What Is Algorithmic Bias For Gen Alpha Digital Literacy? -->
-                <div class="bg-secondary-bg p-4 rounded-lg shadow-xl border border-gray-700">
-                    <h4 class="text-lg font-bold text-white mb-1">
-                        1. What Is Algorithmic Bias For Gen Alpha Digital Literacy?
-                    </h4>
-                    <p class="text-sm text-gray-400 mb-3">
-                        Channel: Gen Alpha Adventures &bull; Length: 3:42
-                    </p>
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/LH8YwYoIe9k"
-                            title="What Is Algorithmic Bias For Gen Alpha Digital Literacy?"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                
-                <!-- Video 2: Why Is Understanding Algorithmic Bias Crucial For Students And Future Jobs? -->
-                <div class="bg-secondary-bg p-4 rounded-lg shadow-xl border border-gray-700">
-                    <h4 class="text-lg font-bold text-white mb-1">
-                        2. Why Is Understanding Algorithmic Bias Crucial For Students And Future Jobs?
-                    </h4>
-                    <p class="text-sm text-gray-400 mb-3">
-                        Channel: Safe AI for The Classroom &bull; Length: 2:40
-                    </p>
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/d9GR4slAmhM"
-                            title="Why Is Understanding Algorithmic Bias Crucial For Students And Future Jobs?"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Video 3: Why Is Algorithmic Bias Important For Digital Literacy? -->
-                <div class="bg-secondary-bg p-4 rounded-lg shadow-xl border border-gray-700">
-                    <h4 class="text-lg font-bold text-white mb-1">
-                        3. Why Is Algorithmic Bias Important For Digital Literacy?
-                    </h4>
-                    <p class="text-sm text-gray-400 mb-3">
-                        Channel: Gen Alpha Adventures &bull; Length: 3:25
-                    </p>
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/K17EJ9SC7Z8"
-                            title="Why Is Algorithmic Bias Important For Digital Literacy?"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
+            <!-- Abstract/Introduction - ADDED ID and SCROLL-OFFSET -->
+            <div id="abstract" class="mb-12 pt-4 scroll-mt-20">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-4 border-b pb-2">Abstract</h2>
+                <p class="text-gray-600 italic leading-relaxed">
+                    This paper investigates the multifaceted impact of generative Artificial Intelligence (AI) on creative industries. It analyzes shifts in the economic models of art, design, and writing, arguing that while AI offers unprecedented tools for rapid prototyping and iteration, it simultaneously challenges traditional intellectual property laws and necessitates a redefinition of "authorship." The conclusion proposes a collaborative framework where human oversight remains the critical benchmark for artistic value and ethical creation.
+                </p>
             </div>
+
+            <!-- Introduction Section - ADDED ID and SCROLL-OFFSET -->
+            <div id="introduction" class="mb-12 pt-4 scroll-mt-20">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Introduction: A New Renaissance</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    The introduction of Large Language Models (LLMs) and generative image systems marks a watershed moment akin to the invention of the printing press. No longer are sophisticated creative tasks the exclusive domain of human hands; machines now participate in the act of generation, raising profound questions about the nature of originality. This assignment will explore three primary areas of impact: the economics of creativity, the legal challenges of intellectual property, and the philosophical debate surrounding genuine artistry in the age of algorithms.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    The core hypothesis is that technology serves as an accelerant, not a replacement, forcing a beneficial evolution in human creativity rather than its extinction.
+                </p>
+            </div>
+
+            <!-- Body Paragraph 1 - ADDED ID and SCROLL-OFFSET -->
+            <div id="section-1" class="mb-12 pt-4 scroll-mt-20">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 border-l-4 border-indigo-500 pl-4">I. The Economic Shockwave</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    The most immediate effect of generative AI is observed in the economic landscape. Freelance markets, particularly for content creation, are seeing drastic deflation in pricing as the barrier to entry for generating draft-quality material collapses. However, this also creates a high-value niche for professionals who can apply critical judgment, refine machine output, and integrate AI tools into complex workflows. The 'prompt engineer' is the new blacksmith, forging digital tools into valuable finished goods.
+                </p>
+                <ul class="list-disc list-inside text-gray-600 ml-5 space-y-2">
+                    <li>Automation of redundant tasks (e.g., initial draft generation, data summarization).</li>
+                    <li>Increased demand for expertise in prompt engineering and model fine-tuning.</li>
+                    <li>Shift from raw content creation to strategic content orchestration.</li>
+                </ul>
+            </div>
+
+            <!-- Body Paragraph 2 - ADDED ID and SCROLL-OFFSET -->
+            <div id="section-2" class="mb-12 pt-4 scroll-mt-20">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 border-l-4 border-indigo-500 pl-4">II. Navigating the Legal Labyrinth</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Intellectual property law struggles to keep pace with the velocity of AI development. Key cases revolve around the fair use of copyrighted training data and determining who—or what—holds the copyright to machine-generated works. Current consensus leans toward requiring a "spark of human creativity" for copyright protection, often vesting ownership in the human who directed the AI, rather than the machine itself. This legal uncertainty demands clearer legislative guidance.
+                </p>
+                <div class="bg-indigo-50 p-4 rounded-lg mt-4 shadow-inner">
+                    <p class="text-sm text-indigo-800 font-semibold">Key Citation:</p>
+                    <blockquote class="text-sm text-indigo-700 italic">
+                        "The tension between open innovation and proprietary rights defines the legal horizon of AI-driven creativity." - Smith, A. (2025). *Digital Copyright in the Algorithmic Age*.
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- Conclusion Section - ADDED ID and SCROLL-OFFSET -->
+            <div id="conclusion" class="mb-4 pt-4 scroll-mt-20">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Conclusion: The Imperative of Human Agency</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    While AI undeniably disrupts established norms, the ultimate conclusion is not one of obsolescence but of elevated purpose. The future of creative labor involves a symbiotic relationship where repetitive, data-intensive tasks are delegated to algorithms, freeing up human practitioners to focus on conceptualization, critical analysis, and injecting unique subjective experience—the elements that technology cannot replicate. To thrive in this new landscape, educational and professional frameworks must prioritize **critical thinking** and **ethical application** of these powerful tools.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed font-medium text-indigo-600">
+                    The artist's role transitions from maker to curator of the machine's output, ensuring that technology remains a servant to vision, not its master.
+                </p>
+            </div>
+
         </section>
-        <!-- END UPDATED BLOCK: Supplemental Video Resources -->
 
-        <!-- Footer: Works Cited / Metadata -->
-        <footer class="mt-12 pt-8 border-t border-gray-700">
-            <!-- This h3 and the list items below will now be green -->
-            <h3 class="text-xl font-semibold text-primary mb-4">Works Cited (Example)</h3>
-            <ul class="text-sm text-gray-400 space-y-2">
-                <li class="hover:text-primary transition-colors cursor-pointer">
-                    Zuboff, S. (2019). *The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power.* PublicAffairs.
-                </li>
-                <li class="hover:text-primary transition-colors cursor-pointer">
-                    Pariser, E. (2011). *The Filter Bubble: What the Internet Is Hiding From You.* Penguin Press.
-                </li>
-                <li class="hover:text-primary transition-colors cursor-pointer">
-                    Castells, M. (2010). *The Rise of the Network Society.* Wiley-Blackwell.
-                </li>
-            </ul>
-            <div class="mt-8 text-center text-xs text-gray-600">
-                <p>Generated for presentation purposes on a responsive modern web canvas.</p>
-            </div>
-        </footer>
+    </main>
 
-    </div>
+    <footer class="text-center py-6 border-t mt-10 text-gray-500 text-sm">
+        <p>&copy; 2025 Academic Web Presentation | Designed with Tailwind CSS for optimal responsiveness.</p>
+    </footer>
 
 </body>
 </html>
