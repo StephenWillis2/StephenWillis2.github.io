@@ -17,9 +17,29 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Custom class for the blue glow effect - Enhanced for a richer, softer glow */
+        .blue-glow {
+            /* x-offset | y-offset | blur | spread | color (using indigo-700 with 60% opacity) */
+            box-shadow: 0 8px 30px rgba(67, 56, 202, 0.6); 
+            transition: box-shadow 0.3s ease;
+        }
+        /* Style for the reading progress bar */
+        #progress-bar {
+            height: 4px;
+            background-color: #4338CA; /* Indigo-700 for the bar */
+            width: 0%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 50; /* Above the navbar */
+            transition: width 0.1s linear;
+        }
     </style>
 </head>
 <body class="antialiased min-h-screen">
+
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar"></div>
 
     <header class="bg-indigo-700 text-white shadow-xl py-8">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,18 +69,18 @@
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
 
-        <!-- NEW IMAGE SECTION - ADDED HERE -->
-        <div class="mb-10 rounded-xl overflow-hidden shadow-xl">
+        <!-- PRIMARY IMAGE SECTION - Added Glow -->
+        <div class="mb-10 rounded-xl overflow-hidden shadow-xl blue-glow">
             <img src="crosscountry.avif" 
                  alt="Black and white photo of a runner competing in a muddy cross country race, splashing through water." 
                  class="w-full h-auto object-cover" 
                  style="max-height: 400px; width: 100%;"
                  onerror="this.onerror=null; this.src='https://placehold.co/1000x400/333/fff?text=Assignment+Visual'">
         </div>
-        <!-- END NEW IMAGE SECTION -->
+        <!-- END PRIMARY IMAGE SECTION -->
 
-        <!-- Main Content Card -->
-        <section class="bg-white p-6 sm:p-10 rounded-2xl shadow-2xl border border-gray-100">
+        <!-- Main Content Card - Added Glow -->
+        <section class="bg-white p-6 sm:p-10 rounded-2xl shadow-2xl border border-gray-100 blue-glow">
 
             <!-- Abstract/Introduction - ADDED ID and SCROLL-OFFSET -->
             <div id="abstract" class="mb-12 pt-4 scroll-mt-20">
@@ -84,8 +104,24 @@
             <!-- Body Paragraph 1 - ADDED ID and SCROLL-OFFSET -->
             <div id="section-1" class="mb-12 pt-4 scroll-mt-20">
                 <h3 class="text-2xl font-semibold text-gray-800 mb-4 border-l-4 border-indigo-500 pl-4">I. The Economic Shockwave</h3>
+                
                 <p class="text-lg text-gray-700 leading-relaxed mb-4">
                     The most immediate effect of generative AI is observed in the economic landscape. Freelance markets, particularly for content creation, are seeing drastic deflation in pricing as the barrier to entry for generating draft-quality material collapses. However, this also creates a high-value niche for professionals who can apply critical judgment, refine machine output, and integrate AI tools into complex workflows. The 'prompt engineer' is the new blacksmith, forging digital tools into valuable finished goods.
+                </p>
+                
+                <!-- FIGURE 1 BELOW TEXT -->
+                <figure class="mx-auto my-6 w-full max-w-lg bg-gray-50 rounded-lg shadow-md overflow-hidden blue-glow">
+                    <img src="pexels-ketchumcommunity-1564470.jpg" 
+                         alt="Two runners on a city street." 
+                         class="w-full h-auto object-cover">
+                    <figcaption class="p-3 text-sm text-gray-600 italic border-t text-center">
+                        Figure 1: Runners navigating an urban environment, illustrating dedication.
+                    </figcaption>
+                </figure>
+                <!-- END FIGURE 1 -->
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    This shift isn't just about efficiency; it's about the democratization of highly skilled tasks. Tools that once required years of apprenticeship (like complex graphic design or orchestral composition) are now accessible to anyone with a descriptive prompt. This redistribution of capability requires workers to move up the value chain, focusing less on production volume and more on strategic oversight and ethical considerations of their digital collaborators.
                 </p>
                 <ul class="list-disc list-inside text-gray-600 ml-5 space-y-2">
                     <li>Automation of redundant tasks (e.g., initial draft generation, data summarization).</li>
@@ -97,10 +133,27 @@
             <!-- Body Paragraph 2 - ADDED ID and SCROLL-OFFSET -->
             <div id="section-2" class="mb-12 pt-4 scroll-mt-20">
                 <h3 class="text-2xl font-semibold text-gray-800 mb-4 border-l-4 border-indigo-500 pl-4">II. Navigating the Legal Labyrinth</h3>
+                
                 <p class="text-lg text-gray-700 leading-relaxed">
                     Intellectual property law struggles to keep pace with the velocity of AI development. Key cases revolve around the fair use of copyrighted training data and determining who—or what—holds the copyright to machine-generated works. Current consensus leans toward requiring a "spark of human creativity" for copyright protection, often vesting ownership in the human who directed the AI, rather than the machine itself. This legal uncertainty demands clearer legislative guidance.
                 </p>
-                <div class="bg-indigo-50 p-4 rounded-lg mt-4 shadow-inner">
+                
+                <!-- FIGURE 2 BELOW TEXT -->
+                <figure class="mx-auto my-6 w-full max-w-lg bg-gray-50 rounded-lg shadow-md overflow-hidden blue-glow">
+                    <img src="pexels-runffwpu-2770408.jpg" 
+                         alt="Group of runners crossing a bridge." 
+                         class="w-full h-auto object-cover">
+                    <figcaption class="p-3 text-sm text-gray-600 italic border-t text-center">
+                        Figure 2: Group participation in a distance race, showing collective effort.
+                    </figcaption>
+                </figure>
+                <!-- END FIGURE 2 -->
+
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    The very concept of "originality" is being stress-tested. If an AI generates a unique piece of music after analyzing a million compositions, is it derivative, or an entirely new synthesis? The law will likely evolve to protect the human input (the prompt, the parameters, the curation) as the protectable creative act, rather than the final, massive output that the machine produced. This focus on human intent is crucial for maintaining accountability.
+                </p>
+                <!-- Citation Box - Added Glow -->
+                <div class="bg-indigo-50 p-4 rounded-lg mt-4 shadow-inner blue-glow">
                     <p class="text-sm text-indigo-800 font-semibold">Key Citation:</p>
                     <blockquote class="text-sm text-indigo-700 italic">
                         "The tension between open innovation and proprietary rights defines the legal horizon of AI-driven creativity." - Smith, A. (2025). *Digital Copyright in the Algorithmic Age*.
@@ -123,9 +176,55 @@
 
     </main>
 
+    <!-- Floating Back-to-Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition-opacity duration-300 opacity-0 hidden" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+
     <footer class="text-center py-6 border-t mt-10 text-gray-500 text-sm">
         <p>&copy; 2025 Academic Web Presentation | Designed with Tailwind CSS for optimal responsiveness.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const progressBar = document.getElementById('progress-bar');
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            // --- Progress Bar & Back-to-Top Logic ---
+            function updateScroll() {
+                const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollTop = document.documentElement.scrollTop;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                
+                if (progressBar) {
+                    progressBar.style.width = scrollPercent + '%';
+                }
+
+                // Show/hide Back-to-Top button
+                if (backToTopButton) {
+                    if (scrollTop > 400) {
+                        backToTopButton.classList.remove('hidden', 'opacity-0');
+                        backToTopButton.classList.add('opacity-100');
+                    } else {
+                        backToTopButton.classList.add('opacity-0');
+                        setTimeout(() => backToTopButton.classList.add('hidden'), 300);
+                    }
+                }
+            }
+
+            window.addEventListener('scroll', updateScroll);
+            updateScroll(); // Initialize state
+
+            if (backToTopButton) {
+                backToTopButton.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
