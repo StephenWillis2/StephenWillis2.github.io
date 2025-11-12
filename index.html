@@ -3,34 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Health Benefits of Running: Assignment</title>
+    <title>Academic Submission: The Evolving Digital Landscape</title>
+    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom Font Import: Inter */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        
-        body {
+        /* Define the primary font, prioritizing Inter */
+        :root {
             font-family: 'Inter', sans-serif;
-            background-color: #0d1117; /* Dark background inspired by GitHub dark theme */
         }
-        .card-image {
-            filter: drop-shadow(0 4px 6px rgba(52, 211, 153, 0.4)); /* Subtle glow effect */
+        /* Custom scrollbar for a sleek look */
+        body::-webkit-scrollbar {
+            width: 8px;
         }
-        .header-image {
-            /* Ensures the image doesn't get too tall */
-            max-height: 400px; 
-            width: 100%;
-            object-fit: cover;
+        body::-webkit-scrollbar-thumb {
+            /* UPDATED: Changed from blue to green */
+            background-color: #10b981; /* emerald-500 */
+            border-radius: 4px;
         }
-        /* Added style for responsive video embeds */
+        body::-webkit-scrollbar-track {
+            background-color: #1f2937; /* gray-800 */
+        }
+        /* Custom responsive container for 16:9 video embeds */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
-            width: 100%;
-            border-radius: 0.75rem; /* 12px */
-            border: 1px solid #34d399; /* Emerald border */
         }
         .video-container iframe {
             position: absolute;
@@ -40,162 +39,181 @@
             height: 100%;
         }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        /* UPDATED: Changed primary color to emerald-500 */
+                        'primary': '#10b981', // Tailwind Emerald-500
+                        'secondary-bg': '#1f2937', // Tailwind Gray-800
+                        'main-bg': '#111827', // Tailwind Gray-900
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body class="min-h-screen p-4 sm:p-8">
+<body class="bg-main-bg min-h-screen text-gray-100 antialiased selection:bg-primary selection:text-white">
 
-    <!-- Main Container -->
-    <div class="max-w-4xl mx-auto bg-gray-800 rounded-2xl shadow-2xl p-6 sm:p-10 border border-gray-700">
-        
-        <!-- Header -->
-        <header class="text-center mb-10">
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">
-                The Profound Benefits of Running
+    <div class="max-w-4xl mx-auto p-6 md:p-10">
+
+        <!-- NEW TOP IMAGE BLOCK (Used to be Figure 3) -->
+        <div class="mb-8 rounded-lg overflow-hidden shadow-2xl">
+            <!-- This image is positioned as an un-numbered introductory visual/banner -->
+            <img src="uploaded:crosscountry.avif-a1dc4010-7b36-48d4-a76c-2a80e586e242" 
+                 alt="A runner splashing through a muddy obstacle, symbolizing the challenges of the digital age." 
+                 class="w-full h-auto object-cover rounded-lg border-2 border-primary transition duration-500 ease-in-out transform hover:scale-[101%]"/>
+        </div>
+        <!-- END NEW TOP IMAGE BLOCK -->
+
+        <!-- Header Block: Title and Metadata -->
+        <header class="mb-10 p-6 bg-secondary-bg rounded-xl shadow-lg border-t-4 border-primary">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-2 leading-tight">
+                The Evolving Digital Landscape: A Critical Analysis
             </h1>
-            <p class="text-xl text-emerald-400 font-medium">
-                Research Assignment Overview: Health &amp; Mitigation
+            <p class="text-lg text-primary font-medium mb-4">
+                Writing Assignment: Critical Theory & Media
             </p>
+            <div class="flex flex-col sm:flex-row sm:justify-between text-sm text-gray-400 border-t border-gray-700 pt-4">
+                <span class="mb-2 sm:mb-0">
+                    Student Name: <span class="text-gray-300 font-semibold">Alex P. Hawthorne</span>
+                </span>
+                <span>
+                    Submission Date: <span class="text-gray-300 font-semibold">November 11, 2025</span>
+                </span>
+            </div>
         </header>
 
-        <!-- Main Image/Graphic Collection (Replaced with user image) -->
-        <figure class="mb-10 rounded-xl overflow-hidden shadow-xl border border-emerald-600/50">
-            <!-- Using the uploaded 'crosscountry.avif' image -->
-            <img class="header-image" 
-                 src="crosscountry.avif" 
-                 alt="Cross country runners on a trail."
-                 onerror="this.onerror=null; this.src='https://placehold.co/800x400/34d399/111827?text=Cross+Country+Running';" 
-            />
-            <figcaption class="p-3 bg-gray-900 text-gray-400 text-center text-sm">
-                Cross Country Running
-            </figcaption>
-        </figure>
-
-
-        <!-- Main Content Introduction -->
-        <div class="mb-10 p-6 bg-gray-700 rounded-xl border-l-4 border-emerald-500">
-            <p class="text-gray-200 leading-relaxed text-lg">
-                So far, my research has found that the **amazing health benefits of running** largely outweigh the potential negatives. The key takeaway is that these risks can be managed with proper knowledge, making running one of the most accessible and effective forms of exercise.
+        <!-- Main Content: The Essay Body -->
+        <main id="essay-content" class="text-gray-300 space-y-6 text-base md:text-lg leading-relaxed">
+            <h2 class="text-2xl font-bold text-white mb-4 border-b border-gray-700 pb-2">Introduction</h2>
+            <p>
+                The turn of the 21st century has witnessed a paradigm shift in human communication, social structure, and knowledge acquisition, driven primarily by the ubiquity of digital technologies. This paper seeks to critically analyze the dual nature of this evolving digital landscape, exploring both its revolutionary potential for democratic engagement and its inherent risks regarding privacy, algorithmic bias, and cultural homogenization. The central thesis is that while digital platforms offer unprecedented tools for connection, their current infrastructure, often controlled by centralized entities, necessitates a revised framework of digital literacy and governance to safeguard individual freedoms.
             </p>
-        </div>
 
-        <!-- Benefits Section -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
-                <svg class="w-8 h-8 mr-3 text-emerald-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"/><path d="M12 20v2"/><path d="M20 12h2"/><path d="M2 12h2"/><path d="m18.5 5.5-1.42 1.42"/><path d="m6.88 17.12-1.42 1.42"/><path d="m17.12 6.88 1.42-1.42"/><path d="m5.5 18.5 1.42-1.42"/><path d="M8 12h10"/><path d="M12 12V8"/><path d="M12 16c1.1 0 2-.9 2-2s-.9-2-2-2"/></svg>
-                Core Health Benefits
-            </h2>
-            
-            <div class="grid md:grid-cols-3 gap-6">
+            <!-- IMAGE 1: Two runners on a city street (pexels-ketchumcommunity-1564470.jpg) - Figure number retained -->
+            <figure class="my-8 rounded-lg overflow-hidden bg-gray-800 p-2 shadow-xl">
+                <img src="uploaded:pexels-ketchumcommunity-1564470.jpg-ddaef62d-7e53-4263-b24c-dc5b73cf5fba" alt="Two runners moving quickly down a city street." class="w-full h-auto object-cover rounded-md border border-gray-700"/>
+                <figcaption class="mt-3 text-center text-sm text-gray-400 italic">Figure 1: The fast-paced reality of modern societal change, requiring constant adaptation.</figcaption>
+            </figure>
+            <!-- END IMAGE 1 -->
+
+            <h2 class="text-2xl font-bold text-white mb-4 border-b border-gray-700 pb-2 pt-4">The Promise of Decentralization</h2>
+            <p>
+                Initially, the internet was hailed as the ultimate democratizing force. The ability for any individual to publish content, bypass traditional gatekeepers, and form global communities represented a profound political and social shift. This decentralized power structure was meant to foster a robust marketplace of ideas, where truth could emerge through open discourse. However, the rise of powerful platform monopolies has complicated this narrative, effectively replacing old media gatekeepers with new, arguably more powerful, algorithmic ones.
+            </p>
+
+            <!-- IMAGE 2: Group of runners on a bridge (pexels-runffwpu-2770408.jpg) - Figure number retained -->
+            <figure class="my-8 rounded-lg overflow-hidden bg-gray-800 p-2 shadow-xl">
+                <img src="uploaded:pexels-runffwpu-2770408.jpg-6ee9b32b-c303-4bdb-8b3f-83c8cf8ec400" alt="A group of runners on a wide bridge, symbolizing connectivity." class="w-full md:w-3/4 mx-auto h-auto object-cover rounded-md border border-gray-700"/>
+                <figcaption class="mt-3 text-center text-sm text-gray-400 italic">Figure 2: Navigating the complex routes of information exchange and community connection.</figcaption>
+            </figure>
+            <!-- END IMAGE 2 -->
+
+            <h2 class="text-2xl font-bold text-white mb-4 border-b border-gray-700 pb-2 pt-4">The Algorithm's Echo Chamber</h2>
+            <p>
+                Algorithmic curation, designed ostensibly to enhance user engagement, has inadvertently led to the proliferation of echo chambers and filter bubbles. By prioritizing content that maximizes screen time, these systems often boost sensationalism, polarization, and misinformation. This phenomenon raises critical questions about the nature of public reason in the digital age. When citizens are presented with divergent and often contradictory realities, the necessary foundation for collective action and shared governance erodes significantly.
+            </p>
+
+            <p>
+                Furthermore, the economic model underpinning these platforms—surveillance capitalism—treats user attention and personal data as the primary commodity. This constant extraction and monetization of private life demands a reassessment of digital rights, moving beyond mere consent to establishing meaningful data sovereignty for the individual.
+            </p>
+
+            <h2 class="text-2xl font-bold text-white mb-4 border-b border-gray-700 pb-2 pt-4">Conclusion</h2>
+            <p>
+                In closing, the digital landscape is neither inherently utopian nor dystopian; it is a powerful tool reflecting the priorities of its creators. The path forward requires a multi-pronged approach: enhanced critical digital literacy in education, regulatory frameworks that ensure algorithmic transparency, and the active support of decentralized, open-source alternatives. Only through informed engagement and proactive governance can we ensure that the revolutionary promise of digital technology serves the interests of a diverse and democratic society, rather than merely enriching a select few.
+            </p>
+        </main>
+        
+        <!-- UPDATED BLOCK: Supplemental Video Resources with Embeds -->
+        <section class="mt-12 pt-8 border-t border-gray-700">
+            <h3 class="text-xl font-semibold text-primary mb-6">Supplemental Video Resources</h3>
+            <div class="space-y-8">
                 
-                <!-- Benefit Card 1: Cardiovascular (Image added) -->
-                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-emerald-500/50 transition duration-300">
-                    <img class="card-image w-20 h-20 mb-3 mx-auto rounded-full p-2 bg-gray-900" 
-                         src="https://placehold.co/100x100/34d399/111827?text=Heart+Health" 
-                         alt="Heart health graphic" />
-                    <h3 class="text-xl font-semibold text-emerald-400 mb-2 text-center">Cardiovascular Enhancement</h3>
-                    <p class="text-gray-300 text-sm text-center">
-                        There are great improvements in the **cardiovascular system**, causing the enhancement of blood and oxygen circulation throughout the body.
+                <!-- Video 1: What Is Algorithmic Bias For Gen Alpha Digital Literacy? -->
+                <div class="bg-secondary-bg p-4 rounded-lg shadow-xl border border-gray-700">
+                    <h4 class="text-lg font-bold text-white mb-1">
+                        1. What Is Algorithmic Bias For Gen Alpha Digital Literacy?
+                    </h4>
+                    <p class="text-sm text-gray-400 mb-3">
+                        Channel: Gen Alpha Adventures &bull; Length: 3:42
                     </p>
-                </div>
-
-                <!-- Benefit Card 2: Mental Health (Image added) -->
-                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-emerald-500/50 transition duration-300">
-                    <img class="card-image w-20 h-20 mb-3 mx-auto rounded-full p-2 bg-gray-900" 
-                         src="https://placehold.co/100x100/34d399/111827?text=Stress+Relief" 
-                         alt="Mental health graphic" />
-                    <h3 class="text-xl font-semibold text-emerald-400 mb-2 text-center">Mental Well-being</h3>
-                    <p class="text-gray-300 text-sm text-center">
-                        **Mental health benefits** include significant stress reduction and an overall improved mood, boosting emotional resilience.
-                    </p>
-                </div>
-
-                <!-- Benefit Card 3: Musculoskeletal (Image added) -->
-                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-emerald-500/50 transition duration-300">
-                    <img class="card-image w-20 h-20 mb-3 mx-auto rounded-full p-2 bg-gray-900" 
-                         src="https://placehold.co/100x100/34d399/111827?text=Bone+Density" 
-                         alt="Bone strength graphic" />
-                    <h3 class="text-xl font-semibold text-emerald-400 mb-2 text-center">Bone Strength & Density</h3>
-                    <p class="text-gray-300 text-sm text-center">
-                        Running helps to **increase bone density** and prevent osteoporosis by stimulating the bones to adapt and become stronger.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Risks and Mitigation Section (User image added) -->
-        <section>
-            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
-                <svg class="w-8 h-8 mr-3 text-red-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.83 18a2 2 0 0 0 1.76 3H20.41a2 2 0 0 0 1.76-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                Managing the Risks
-            </h2>
-            
-            <!-- Updated to a grid to show text and image side-by-side -->
-            <div class="grid md:grid-cols-2 gap-6 items-center bg-gray-700 p-6 rounded-xl shadow-lg border-l-4 border-red-500">
-                <p class="text-gray-300 leading-relaxed">
-                    While there are still risks like **overtraining**, muscle fatigue, and **nutritional deficits**, I have found that if you understand how to properly train and eat a well-balanced diet, you can avoid all the negative effects altogether. This careful approach to **proper training techniques** and **nutrition** is key to sustainable and healthy running.
-                </p>
-                
-                <!-- User image added here -->
-                <figure class_="rounded-lg overflow-hidden border border-red-600/50">
-                    <img src="cross country running in corpus christi texas injuries.jpg" 
-                         alt="A runner holding their leg, indicating a potential injury." 
-                         class="w-full h-auto object-cover rounded-lg"
-                         onerror="this.onerror=null; this.src='https://placehold.co/400x300/ef4444/111827?text=Running+Injuries';"
-                    >
-                    <figcaption class="p-2 bg-gray-900 text-gray-400 text-center text-xs">
-                        Proper training helps avoid common running injuries.
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <!-- New Related Videos Section -->
-        <section class="mt-12">
-            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
-                <svg class="w-8 h-8 mr-3 text-emerald-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l-8 5 8 5V3z"/><path d="M4 21v-5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5"/><path d="M4 12V3c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v9"/></svg>
-                Related Videos
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <!-- Video 1: Benefits (NEW) -->
-                <div>
-                    <h3 class="text-xl font-semibold text-emerald-400 mb-3 text-center">What Happens When You Run Daily?</h3>
-                    <div class="video-container shadow-xl">
-                        <iframe src="https://www.youtube.com/embed/N9C88z3g0Es" 
-                                title="YouTube video player: What Happens To Your Body When You Run 30 Minutes Every Day" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Video 2: Injury Prevention (NEW) -->
-                <div>
-                    <h3 class="text-xl font-semibold text-red-500 mb-3 text-center">Common Running Injuries & How To Prevent Them</h3>
-                    <div class="video-container shadow-xl border-red-500"> <!-- Red border for this one -->
-                        <iframe src="https://www.youtube.com/embed/eakmeWlzlhs" 
-                                title="YouTube video player: Common Running Injuries & How To Prevent Them" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
-                                
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/LH8YwYoIe9k"
+                            title="What Is Algorithmic Bias For Gen Alpha Digital Literacy?"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
                         </iframe>
                     </div>
                 </div>
                 
-            
+                <!-- Video 2: Why Is Understanding Algorithmic Bias Crucial For Students And Future Jobs? -->
+                <div class="bg-secondary-bg p-4 rounded-lg shadow-xl border border-gray-700">
+                    <h4 class="text-lg font-bold text-white mb-1">
+                        2. Why Is Understanding Algorithmic Bias Crucial For Students And Future Jobs?
+                    </h4>
+                    <p class="text-sm text-gray-400 mb-3">
+                        Channel: Safe AI for The Classroom &bull; Length: 2:40
+                    </p>
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/d9GR4slAmhM"
+                            title="Why Is Understanding Algorithmic Bias Crucial For Students And Future Jobs?"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Video 3: Why Is Algorithmic Bias Important For Digital Literacy? -->
+                <div class="bg-secondary-bg p-4 rounded-lg shadow-xl border border-gray-700">
+                    <h4 class="text-lg font-bold text-white mb-1">
+                        3. Why Is Algorithmic Bias Important For Digital Literacy?
+                    </h4>
+                    <p class="text-sm text-gray-400 mb-3">
+                        Channel: Gen Alpha Adventures &bull; Length: 3:25
+                    </p>
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/K17EJ9SC7Z8"
+                            title="Why Is Algorithmic Bias Important For Digital Literacy?"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
 
             </div>
         </section>
+        <!-- END UPDATED BLOCK: Supplemental Video Resources -->
+
+        <!-- Footer: Works Cited / Metadata -->
+        <footer class="mt-12 pt-8 border-t border-gray-700">
+            <!-- This h3 and the list items below will now be green -->
+            <h3 class="text-xl font-semibold text-primary mb-4">Works Cited (Example)</h3>
+            <ul class="text-sm text-gray-400 space-y-2">
+                <li class="hover:text-primary transition-colors cursor-pointer">
+                    Zuboff, S. (2019). *The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power.* PublicAffairs.
+                </li>
+                <li class="hover:text-primary transition-colors cursor-pointer">
+                    Pariser, E. (2011). *The Filter Bubble: What the Internet Is Hiding From You.* Penguin Press.
+                </li>
+                <li class="hover:text-primary transition-colors cursor-pointer">
+                    Castells, M. (2010). *The Rise of the Network Society.* Wiley-Blackwell.
+                </li>
+            </ul>
+            <div class="mt-8 text-center text-xs text-gray-600">
+                <p>Generated for presentation purposes on a responsive modern web canvas.</p>
+            </div>
+        </footer>
 
     </div>
 
-    <!-- Footer for Assignment Source -->
-    <footer class="text-center mt-8 text-gray-500 text-sm">
-        <p>Assignment source material provided by student research.</p>
-    </footer>
-
 </body>
 </html>
+
