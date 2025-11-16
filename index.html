@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Running Health Benefits for Young Adults</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom font import for aesthetic consistency (Inter is Tailwind default but ensures availability) */
@@ -72,14 +72,17 @@
 
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
 
-        <!-- PRIMARY IMAGE SECTION - Added Glow -->
-        <div class="mb-10 rounded-xl overflow-hidden shadow-xl blue-glow">
+        <!-- PRIMARY IMAGE SECTION - Added Glow and Caption (Figure A) -->
+        <figure class="mb-10 rounded-xl overflow-hidden shadow-xl blue-glow bg-gray-50">
             <img src="crosscountry.avif" 
                  alt="Black and white photo of a runner competing in a muddy cross country race, splashing through water." 
                  class="w-full h-auto object-cover" 
                  style="max-height: 400px; width: 100%;"
                  onerror="this.onerror=null; this.src='https://placehold.co/1000x400/333/fff?text=Assignment+Visual'">
-        </div>
+            <figcaption class="p-4 text-sm text-gray-600 italic text-center border-t border-gray-200">
+                Figure A: A runner pushes through adversity, symbolizing the perseverance required as creative labor adapts to the arrival of generative AI technologies.
+            </figcaption>
+        </figure>
         <!-- END PRIMARY IMAGE SECTION -->
 
         <!-- Main Content Card - Added Glow -->
@@ -121,7 +124,7 @@
                     The most immediate effect of generative AI is observed in the economic landscape. Freelance markets, particularly for content creation, are seeing drastic deflation in pricing as the barrier to entry for generating draft-quality material collapses. However, this also creates a high-value niche for professionals who can apply critical judgment, refine machine output, and integrate AI tools into complex workflows. The 'prompt engineer' is the new blacksmith, forging digital tools into valuable finished goods.
                 </p>
                 
-                <!-- FIGURE 1 BELOW TEXT (KEPT) -->
+                <!-- FIGURE 1 BELOW TEXT -->
                 <figure class="mx-auto my-6 w-full max-w-lg bg-gray-50 rounded-lg shadow-md overflow-hidden blue-glow">
                     <img src="pexels-ketchumcommunity-1564470.jpg" 
                          alt="Two runners on a city street." 
@@ -152,6 +155,17 @@
                     Intellectual property law struggles to keep pace with the velocity of AI development. Key cases revolve around the fair use of copyrighted training data and determining who—or what—holds the copyright to machine-generated works. Current consensus leans toward requiring a "spark of human creativity" for copyright protection, often vesting ownership in the human who directed the AI, rather than the machine itself. This legal uncertainty demands clearer legislative guidance.
                 </p>
 
+                <!-- FIGURE 2 ADDED -->
+                <figure class="mx-auto my-6 w-full max-w-lg bg-gray-50 rounded-lg shadow-md overflow-hidden blue-glow">
+                    <img src="pexels-runffwpu-2770408.jpg" 
+                         alt="Group of runners crossing a bridge." 
+                         class="w-full h-auto object-cover">
+                    <figcaption class="p-3 text-sm text-gray-600 italic border-t text-center">
+                        Figure 2: The complexity of a group navigating a shared path reflects the challenges of defining ownership and originality in collaborative AI ecosystems.
+                    </figcaption>
+                </figure>
+                <!-- END FIGURE 2 -->
+
                 <p class="text-lg text-gray-700 leading-relaxed mb-4">
                     The very concept of "originality" is being stress-tested. If an AI generates a unique piece of music after analyzing a million compositions, is it derivative, or an entirely new synthesis? The law will likely evolve to protect the human input (the prompt, the parameters, the curation) as the protectable creative act, rather than the final, massive output that the machine produced. This focus on human intent is crucial for maintaining accountability.
                 </p>
@@ -177,7 +191,7 @@
 
         </section>
 
-        <!-- MEDIA RESOURCES SECTION (NEW, Moved from inside the main content card) -->
+        <!-- MEDIA RESOURCES SECTION -->
         <section id="media-resources" class="mt-8 pt-4 scroll-mt-20">
             <!-- This section uses the same prominent card style -->
             <div class="bg-white p-6 sm:p-10 rounded-2xl shadow-2xl border border-gray-100 blue-glow">
@@ -316,5 +330,6 @@
 
 </body>
 </html>
+
 
 
